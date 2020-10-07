@@ -1,0 +1,44 @@
+
+/*
+Template Name: Jobya - Responsive Job Listing Template
+Author: Themesdesign
+File: main stylesheet
+*/
+
+/**********************
+00. plugins
+01.General
+02.helper
+03.components
+04.menu
+04.5 fonts
+05.default
+06.home
+07.footer
+08.subscribe
+09.jobs
+10.candidates
+11.employers
+12.blog
+13.pages
+14.contact
+15.post-a-job
+**********************/
+
+@import "plugins/__plugins";
+@import "_variables";
+@import "_bootstrap_custom";
+@import "_components";
+@import "_fonts";
+@import "_general";
+@import "_helper";
+@import "_menu";
+@import "_home";
+@import "_jobs";
+@import "_candidates";
+@import "_employers";
+@import "_blog";
+@import "_pages";
+@import "_subscribe";
+@import "_contact";
+@import "_footer";
