@@ -49,8 +49,8 @@
             <!-- Logo container-->
             <div>
                 <a href="index.html" class="logo">
-                    <img src="images/logo-light.png" alt="" class="logo-light" height="18" />
-                    <img src="images/logo-dark.png" alt="" class="logo-dark" height="18" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-light" height="25" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-dark" height="25" />
                 </a>
             </div>
             <div class="buy-button">
@@ -134,8 +134,7 @@
     <!-- Navbar End -->
 
     <!-- Start Home -->
-    <section class="bg-home" style="background: url('https://via.placeholder.com/2000X1333//88929f/5a6270C/O https://placeholder.com/') center center;">
-        <div class="bg-overlay"></div>
+    <section class="bg-home">
         <div class="home-center">
             <div class="home-desc-center">
                 <div class="container">
@@ -1870,5 +1869,5 @@
         </div>
     </section>
     <!-- subscribe end -->
-    
+
 <?php get_footer(); ?>
