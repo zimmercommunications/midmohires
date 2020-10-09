@@ -135,6 +135,11 @@
 
     <!-- Start Home -->
     <section class="bg-home">
+        <div class="back">
+            <div class="bg-layer"></div>
+            <img class="people" src="<?php echo get_template_directory_uri() . '/assets/img/job-fair-dude.jpg'; ?>" />
+            <img class="hands blend--color-dodge" src="<?php echo get_template_directory_uri() . '/assets/img/handshake.png'; ?>" />
+        </div>
         <div class="home-center">
             <div class="home-desc-center">
                 <div class="container">

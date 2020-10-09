@@ -6,7 +6,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 0; 
+        opacity: 0;
         transition: all 0.5s ease;
     }
     .content {
@@ -43,7 +43,6 @@
         transition: all 0.5s ease;
     }
     &:hover {
-        transform: translateY(-10px);
         .overlay {
             opacity: 0.6;
         }
@@ -79,7 +78,7 @@
                 position: relative;
             }
         }
-        .widget-search, .searchform { 
+        .widget-search, .searchform {
             input[type="text"] {
                 box-shadow: none;
                 padding: 12px 15px;
@@ -114,7 +113,7 @@
         .widget-title {
             font-size: 18px;
         }
-        
+
         .catagories{
             li {
                 padding-bottom: 10px;
@@ -132,7 +131,7 @@
                     }
                 }
             }
-        }      
+        }
         .post-recent {
             padding-bottom: 15px;
             &:last-child {
@@ -141,7 +140,7 @@
             .post-recent-thumb {
                 width: 25%;
             }
-            
+
             .post-recent-content {
                 width: 75%;
                 padding-left: 10px;
