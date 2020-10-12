@@ -15,4 +15,11 @@
         itemsDesktop: [1199, 2],
         itemsDesktopSmall: [979, 2]
     });
+
+    $('body').on('loaded', function(){
+      setTimeout(function(){
+        $('.bg-home .back').addClass('loaded');
+      }, 800);
+    });
+
 })(jQuery)

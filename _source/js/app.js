@@ -16,6 +16,7 @@
         $('body').delay(350).css({
             'overflow': 'visible'
         });
+        $('body').trigger('loaded');
     });
 
     // Selectize
