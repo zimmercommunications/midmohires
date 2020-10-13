@@ -7,6 +7,8 @@
 
             //Load all inc files
             self::load('enqueue');
+            self::load('cpt');
+            self::load('ctax');
 
         }
 

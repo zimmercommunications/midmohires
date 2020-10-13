@@ -13,11 +13,13 @@ prepros.config
 .ds_store
 .DS_Store
 
-#ignore theme .min.css files
+#ignore theme .min files
 themes/**/*.min.css
+themes/**/*.min.js
 
-#ignore plugin .min.css files
+#ignore plugin .min files
 plugins/**/*.min.js
+plugins/**/*.min.css
 
 #ignore all map and js files
 *.css.map
