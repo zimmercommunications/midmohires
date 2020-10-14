@@ -9,7 +9,7 @@
             self::load('enqueue');
             self::load('cpt');
             self::load('ctax');
-
+            self::load('acf');
         }
 
         private function load($file){

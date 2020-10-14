@@ -73,7 +73,7 @@
       		"rewrite" => [ "slug" => "jobs", "with_front" => true ],
       		"query_var" => true,
       		"menu_icon" => "dashicons-nametag",
-      		"supports" => [ "title", "editor", "thumbnail", "excerpt" ],
+      		"supports" => [ "title", "thumbnail", "excerpt" ],
       	];
 
       	register_post_type( "job", $args );
