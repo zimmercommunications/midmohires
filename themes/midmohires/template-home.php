@@ -172,7 +172,7 @@ get_header(); ?>
                                               <div class="col-lg-3 col-md-6">
                                                   <div class="registration-form-box">
                                                       <i class="fa fa-location-arrow"></i>
-                                                      <select id="select-country" class="demo-default">
+                                                      <select id="select-country" class="form-control rounded registration-input-box">
                                                           <option value="">Location</option>
                                                           <option value="AF">Afghanistan</option>
                                                           <option value="AX">&Aring;land Islands</option>
