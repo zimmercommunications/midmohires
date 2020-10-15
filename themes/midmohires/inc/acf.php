@@ -9,6 +9,7 @@
             self::load('home-page-settings');
             self::load('job-custom-field');
             self::load('per-company-field');
+            self::load('job-category-settings');
 
         }
 
