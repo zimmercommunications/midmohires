@@ -1,7 +1,7 @@
 <?php
 if( function_exists('acf_add_local_field_group') ):
 
-acf_add_local_field_group(array(
+	acf_add_local_field_group(array(
 	'key' => 'group_5f860bb841987',
 	'title' => 'Job Custom Field',
 	'fields' => array(
@@ -163,6 +163,22 @@ acf_add_local_field_group(array(
 			'media_upload' => 1,
 			'delay' => 0,
 		),
+		array(
+			'key' => 'field_5f8ddfeb9a284',
+			'label' => 'Website URL',
+			'name' => 'website_url',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -182,5 +198,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
+
 
 endif;

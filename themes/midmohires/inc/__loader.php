@@ -10,6 +10,7 @@
             self::load('cpt');
             self::load('ctax');
             self::load('acf');
+            self::load('helpers');
         }
 
         private function load($file){
