@@ -70,9 +70,6 @@ $jobType = get_field("job_type")[0];
     <div class="p-3 bg-light">
         <div class="row">
             <div class="col-md-4">
-                <div>
-                    <p class="text-muted mb-0 mo-mb-2"><span class="text-dark">Experience :</span>  </p>
-                </div>
             </div>
             <div class="col-md-6">
                 <div>
