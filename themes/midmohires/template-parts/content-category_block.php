@@ -1,5 +1,5 @@
 <div class="col-lg-3 col-md-6 mt-4 pt-2">
-    <a href="javascript:void(0)">
+    <a href="<?php echo get_term_link($args['term']); ?>">
         <div class="popu-category-box bg-light rounded text-center p-4">
             <div class="popu-category-icon mb-3">
                 <?php

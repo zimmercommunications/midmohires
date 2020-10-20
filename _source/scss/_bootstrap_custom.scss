@@ -27,31 +27,31 @@
     background-color: $light !important;
 }
 //Texts
-.text-primary {
+.text-primary, .text-primary a {
     color: $primary !important;
 }
-.text-secondary {
+.text-secondary, .text-secondary a {
     color: $secondary !important;
 }
-.text-success {
+.text-success, .text-success a {
     color: $success !important;
 }
-.text-danger {
+.text-danger, .text-danger a {
     color: $danger !important;
 }
-.text-info {
+.text-info, .text-info a {
     color: $info !important;
 }
-.text-warning {
+.text-warning, .text-warning a {
     color: $warning !important;
 }
-.text-dark {
+.text-dark, .text-dark a {
     color: $dark !important;
 }
-.text-light {
+.text-light, .text-light a {
     color: $light !important;
 }
-.text-muted {
+.text-muted, .text-muted a {
     color: $muted !important;
 }
 //li (list inline item)

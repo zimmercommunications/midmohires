@@ -20,7 +20,7 @@
 
     <div class="row justify-content-center">
         <div class="col-12 text-center mt-4 pt-2">
-            <a href="javascript:void(0)" class="btn btn-primary-outline">Browse All Jobs <i class="mdi mdi-chevron-right"></i></a>
+            <a href="<?php echo get_post_type_archive_link('job'); ?>" class="btn btn-primary-outline">Browse All Jobs <i class="mdi mdi-chevron-right"></i></a>
         </div>
     </div>
 </div>
