@@ -11,6 +11,7 @@
             self::load('ctax');
             self::load('acf');
             self::load('helpers');
+            self::load('supports');
         }
 
         private function load($file){
