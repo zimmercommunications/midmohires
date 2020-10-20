@@ -1,16 +1,16 @@
 <?php
 if( function_exists('acf_add_local_field_group') ):
 
-	acf_add_local_field_group(array(
+acf_add_local_field_group(array(
 	'key' => 'group_5f860bb841987',
 	'title' => 'Job Custom Field',
 	'fields' => array(
 		array(
 			'key' => 'field_5f860bf62230f',
-			'label' => 'Company',
-			'name' => 'company',
+			'label' => 'Display Name',
+			'name' => 'display_name',
 			'type' => 'text',
-			'instructions' => 'Enter the name of the company providing this job.',
+			'instructions' => 'The name you want to show on the front-end',
 			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -19,10 +19,10 @@ if( function_exists('acf_add_local_field_group') ):
 				'id' => '',
 			),
 			'default_value' => '',
-			'placeholder' => 'Company Name',
+			'placeholder' => 'Display Name',
 			'prepend' => '',
 			'append' => '',
-			'maxlength' => 32,
+			'maxlength' => 46,
 		),
 		array(
 			'key' => 'field_5f861539762c7',
@@ -179,6 +179,43 @@ if( function_exists('acf_add_local_field_group') ):
 			'default_value' => '',
 			'placeholder' => '',
 		),
+		array(
+			'key' => 'field_5f8f30a8b4881',
+			'label' => 'How to Apply',
+			'name' => 'how_to_apply',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+		array(
+			'key' => 'field_5f8f2a069a722',
+			'label' => 'Google Maps Lookup',
+			'name' => 'google_maps_lookup',
+			'type' => 'google_map',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'center_lat' => '',
+			'center_lng' => '',
+			'zoom' => '',
+			'height' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -198,6 +235,5 @@ if( function_exists('acf_add_local_field_group') ):
 	'active' => true,
 	'description' => '',
 ));
-
 
 endif;

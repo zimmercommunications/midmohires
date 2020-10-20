@@ -10,12 +10,6 @@ get_header(); ?>
 <?php get_template_part('template-parts/content', 'front_hero'); ?>
 <!-- front page hero end -->
 
-<!-- how it works start -->
-<section class="section">
-    <?php get_template_part("template-parts/content", "how_it_works"); ?>
-</section>
-<!-- how it works end -->
-
 <!-- companies start -->
 <section>
     <?php get_template_part("template-parts/categories", "companies"); ?>
@@ -39,10 +33,3 @@ get_header(); ?>
     <?php get_template_part('template-parts/content', 'counter'); ?>
 </section>
 <!-- counter end -->
-
-<!-- testimonial start -->
-<section class="section">
-    <?php get_template_part("template-parts/content", "testimonials"); ?>
-</section> <!-- testimonial end -->
-
-<?php get_footer(); ?>
