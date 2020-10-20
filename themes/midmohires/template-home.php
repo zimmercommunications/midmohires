@@ -33,3 +33,5 @@ get_header(); ?>
     <?php get_template_part('template-parts/content', 'counter'); ?>
 </section>
 <!-- counter end -->
+
+<?php get_footer(); ?>
