@@ -8,9 +8,15 @@ $term = get_queried_object();
 
 
 //accessing the array w/n the terms "company" and accessing the first (and only) term which is the assigned company.
-$rawLogo = get_field('logo', $company[0]);
+$square = get_field('square_logo', $company[0]);
+if($square){
+    $rawLogo = $square;
+} else {
+    $rawLogo = get_field('logo', $company[0]);
+}
+
 //setting the logo size var
-$logoSize = 'thumbnail';
+$logoSize = 'medium';
 //accessing the array for the image. path: terms(company)->term(company)->'logo'->'sizes'->
 $logo = $rawLogo['sizes'][$logoSize];
 
@@ -27,7 +33,7 @@ $salary = get_field("salary");
 $jobType = get_field("job_type")[0];
 
 
- ?>
+?>
 
 <div class="job-box bg-white overflow-hidden border rounded mt-4 position-relative overflow-hidden">
     <div class="lable text-center pt-2 pb-2">
@@ -38,16 +44,16 @@ $jobType = get_field("job_type")[0];
     <div class="p-4">
         <div class="row align-items-center">
             <div class="col-md-2">
-                <div class="mo-mb-2">
-
-                  <img src="<?php echo $logo;?>" alt="<?php echo $logo; ?>" />
-
+                <div class="mo-mb-2 logo-container">
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo $logo;?>" alt="<?php echo $logo; ?>" />
+                    </a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div>
-                    <h5 class="f-18"><a href="#" class="text-dark"><?php the_title(); ?></a></h5>
-                    <p class="text-muted mb-0"><?php if(isset($company[0])) echo $company[0]->name; ?></p>
+                    <h5 class="f-18"><a href="<?php the_permalink(); ?>" class="text-dark"><?php the_field('display_name'); ?></a></h5>
+                    <p class="text-muted mb-0"><?php if(isset($company[0])) : ?><a href="<?php echo get_term_link($company[0]); ?>"><?php echo $company[0]->name; ?></a><?php endif; ?></p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -63,25 +69,6 @@ $jobType = get_field("job_type")[0];
             <div class="col-md-2">
                 <div>
                     <p class="text-muted mb-0"><?php echo $jobType; ?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="p-3 bg-light">
-        <div class="row">
-            <div class="col-md-4">
-                <div>
-                    <p class="text-muted mb-0 mo-mb-2"><span class="text-dark">Experience :</span>  </p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div>
-                    <p class="text-muted mb-0 mo-mb-2"><span class="text-dark">Notes :</span> languages only differ in their grammar. </p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div>
-                    <a target="_blank" href="<?php getApplyNowLink($company[0]); ?>" class="text-primary">Apply Now <i class="mdi mdi-chevron-double-right"></i></a>
                 </div>
             </div>
         </div>

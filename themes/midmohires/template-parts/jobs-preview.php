@@ -38,7 +38,14 @@
                           */
                             $args = array(
                                 'post_type' => 'job',
-                                'posts_per_page' => 4
+                                'posts_per_page' => 4,
+                                'meta_query' => array(
+                                  array(
+                                    'key' => 'featured',
+                                    'value' => 1,
+                                  ),
+                                )
+
                             );
                             //starting the query
                             $query = new WP_Query( $args );
