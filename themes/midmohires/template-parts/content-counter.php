@@ -1,6 +1,7 @@
 <div class="bg-overlay bg-overlay-gradient"></div>
 <div class="container">
     <div class="row" id="counter">
+      
         <div class="col-md-3 col-6">
             <div class="home-counter pt-4 pb-4">
                 <div class="float-left counter-icon mr-3">
@@ -24,7 +25,7 @@
                 </div>
             </div>
         </div>
-
+      
         <div class="col-md-3 col-6">
             <div class="home-counter pt-4 pb-4">
                 <div class="float-left counter-icon mr-3">
@@ -36,6 +37,7 @@
                 </div>
             </div>
         </div>
+      
     </div>
 
 </div>
