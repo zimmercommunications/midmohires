@@ -36,7 +36,7 @@ get_header(); ?>
 
 <!-- counter start -->
 <section class="section bg-counter position-relative" style="background: url('https://via.placeholder.com/200X700//88929f/5a6270C/O https://placeholder.com/') center center;">
-    <?php get_template_part('template-parts/content, 'counter); ?>
+    <?php get_template_part('template-parts/content', 'counter'); ?>
 </section>
 <!-- counter end -->
 
