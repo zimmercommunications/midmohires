@@ -21,3 +21,23 @@ function showArray($array){
     echo print_r($array);
     echo "</pre>";
 }
+
+//Class to help with counters template section on the home template
+class Counters{
+  public static function jobs(){
+    $count = 0;
+    foreach( get_posts( array('post_type' => 'Job')) as $i){
+      // what to do while in each item of the array
+      $count += 1;
+    }
+    echo $count;
+  }
+  public static function companies(){
+    $count = 0;
+    foreach( get_terms( array('taxonomy' => 'Company')) as $i){
+      // what to do while in each item of the array
+      $count += 1;
+    }
+    echo $count;
+  }
+}
