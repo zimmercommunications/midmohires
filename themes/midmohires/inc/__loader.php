@@ -12,6 +12,7 @@
             self::load('acf');
             self::load('helpers');
             self::load('supports');
+            self::load('menus');
         }
 
         private function load($file){
