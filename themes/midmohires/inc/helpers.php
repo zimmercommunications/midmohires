@@ -43,3 +43,48 @@ class Counters{
 }
 
 //Class to help with picking between company information
+class Info_Sort{
+  function pick_address($arg_id){
+    $company = get_the_terms($arg_id, 'company');
+    $company_location = get_fields('location', $company);
+    $job_address = get_field('location', $arg_id );
+
+    if($job_address != null && $company_location != null){
+      echo $job_address;
+    }
+    elseif($job_address != null && $company_location == null){
+      echo $job_address;
+    }
+    elseif($job_address == null && $company_location != null){
+      echo $company_location;
+    }
+  }
+  function pick_website($arg_id){
+    $company = get_the_terms($arg_id, 'company');
+    $company_website = get_fields('website_url', $company);
+    $job_website = get_field('website_url', $arg_id );
+
+    if($job_website != null && $company_website != null){
+      echo $job_website;
+    }
+    elseif($job_website != null && $company_website == null){
+      echo $job_website;
+    }
+    elseif($job_website == null && $company_website != null){
+      echo $company_website;
+    }
+    else{
+    echo "Test";
+    }
+  }
+}
+
+function pick_job_address($arg_id = false){
+  if(!$arg_id) $arg_id = get_the_ID();
+  return Info_Sort::pick_address($arg_id);
+}
+
+function pick_job_website($arg_id = false){
+  if(!$arg_id) $arg_id = get_the_ID();
+  return Info_Sort::pick_website($arg_id);
+}
