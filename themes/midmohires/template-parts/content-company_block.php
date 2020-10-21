@@ -5,7 +5,7 @@ $company = $args['term'];
 
 
 
-<div class="col-lg-4 col-md-4 col-6 mt-4 pt-2 text-center">
+<div class="col-lg-3 col-md-4 col-6 mt-4 pt-2 text-center company-block">
     <?php
     $image = get_field('logo', $company);
     if( !empty( $image ) ): ?>
