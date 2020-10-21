@@ -21,9 +21,16 @@
 }
 
 .company-logo-link{
+  display: block;
+
   img{
     opacity: 1;
+    max-width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    height: auto!important;
     transition: opacity 200ms linear;
+    max-height: 180px;
   }
 
   &:hover{

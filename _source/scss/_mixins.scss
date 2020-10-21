@@ -1,0 +1,49 @@
+@use "sass:map";
+
+@mixin mobile {
+  @media only screen and (min-width: map.get($breakpoints, "mobile")){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: map.get($breakpoints, "tablet")){
+    @content;
+  }
+}
+
+@mixin tablet_pro {
+  @media only screen and (min-width: map.get($breakpoints, "tablet_pro")){
+    @content;
+  }
+}
+
+@mixin notebook_small {
+  @media only screen and (min-width: map.get($breakpoints, "notebook_small")){
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media only screen and (min-width: map.get($breakpoints, "notebook")){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: map.get($breakpoints, "desktop")){
+    @content;
+  }
+}
+
+@mixin qhd {
+  @media only screen and (min-width: map.get($breakpoints, "qhd")){
+    @content;
+  }
+}
+
+@mixin uhd {
+  @media only screen and (min-width: map.get($breakpoints, "uhd")){
+    @content;
+  }
+}
