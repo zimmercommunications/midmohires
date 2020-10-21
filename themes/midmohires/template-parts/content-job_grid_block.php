@@ -45,13 +45,13 @@ $jobType = get_field("job_type")[0];
             <div class="grid-list-desc mt-3">
                 <h5 class="mb-1"><a href="<?php the_permalink(); ?>" class="text-dark"><?php the_field('display_name') ?></a></h5>
                 <p class="text-muted f-14 mb-1"><?php echo pick_job_address(); ?></p>
-                <p class="text-muted mb-1">$700 - $800/month</p>
-                <p class="text-muted mb-1">3 Years Exp.</p>
+                <p class="text-muted mb-1"><?php the_field('salary'); ?></p>
+                <p class="text-muted mb-1"><small>Posted: <?php echo time_elapsed_string(get_the_modified_date()); ?></small></p>
             </div>
         </div>
 
         <div class="apply-button p-3 border-top">
-            <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
+            <a href="<?php the_permalink() ?>" class="btn btn-primary btn-sm">More Details</a>
         </div>
     </div>
 </div>
