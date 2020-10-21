@@ -37,7 +37,7 @@
 
             <!-- Logo container-->
             <div>
-                <a href="index.html" class="logo">
+                <a href="<?php echo site_url(); ?>" class="logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-light" height="25" />
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-dark" height="25" />
                 </a>
