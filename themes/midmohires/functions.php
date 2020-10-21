@@ -15,7 +15,7 @@
         }
 
     }
-    register_nav_menu('top_menu', 'Menu for all basic website naviagation');
+
 
 
     //Init MidMo_Incs
