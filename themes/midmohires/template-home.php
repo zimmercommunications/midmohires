@@ -10,6 +10,12 @@ get_header(); ?>
 <?php get_template_part('template-parts/content', 'front_hero'); ?>
 <!-- front page hero end -->
 
+<!-- how it works start -->
+<section class="section">
+    <?php get_template_part("template-parts/content", "how_it_works"); ?>
+</section>
+<!-- how it works end -->
+
 <!-- companies start -->
 <section>
     <?php get_template_part("template-parts/categories", "companies"); ?>
@@ -29,7 +35,7 @@ get_header(); ?>
 <!-- popular category end -->
 
 <!-- counter start -->
-<section class="section bg-counter position-relative" style="background: url('<?php echo get_template_directory_uri() . '/assets/img/counter-back.jpg'; ?>') center center; background-size: cover; background-repeat: no-repeat;">
+<section class="section bg-counter position-relative" style="background: url('https://via.placeholder.com/200X700//88929f/5a6270C/O https://placeholder.com/') center center;">
     <?php get_template_part('template-parts/content', 'counter'); ?>
 </section>
 <!-- counter end -->
