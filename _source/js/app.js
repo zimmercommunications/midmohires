@@ -20,7 +20,7 @@
     });
 
     // Selectize
-    $('#select-category, #select-lang,#select-company').selectize({
+    $('#select-category, #select-lang, #select-company').selectize({
         create: false,
         sortField: {
             field: 'text',
