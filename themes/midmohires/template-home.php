@@ -29,7 +29,7 @@ get_header(); ?>
 <!-- popular category end -->
 
 <!-- counter start -->
-<section class="section bg-counter position-relative" style="background: url('https://via.placeholder.com/200X700//88929f/5a6270C/O https://placeholder.com/') center center;">
+<section class="section bg-counter position-relative" style="background: url('<?php echo get_template_directory_uri() . '/assets/img/counter-back.jpg'; ?>') center center; background-size: cover; background-repeat: no-repeat;">
     <?php get_template_part('template-parts/content', 'counter'); ?>
 </section>
 <!-- counter end -->
