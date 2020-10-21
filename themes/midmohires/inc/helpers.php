@@ -41,3 +41,5 @@ class Counters{
     echo $count;
   }
 }
+
+//Class to help with picking between company information
