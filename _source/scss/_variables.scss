@@ -38,3 +38,14 @@ $font-size-base:            16px;
 
 $font-family-base:          'Nunito', sans-serif;
 $font-family-secondary:     'Nunito', sans-serif;
+
+$breakpoints: (
+  "mobile": 0px,
+  "tablet": 481px,
+  "tablet_pro": 769px,
+  "notebook_small": 992px,
+  "notebook": 1200px,
+  "desktop": 1440px,
+  "qhd": 1920px,
+  "uhd": 2560px
+);

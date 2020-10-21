@@ -1,9 +1,5 @@
 <?php
 
-/*
-Template Name: Home Page
-*/
-
 get_header(); ?>
 
 <!-- front page hero start -->
