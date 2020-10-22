@@ -7,7 +7,6 @@
 
             //Load all inc files
             self::load('inc/__loader');
-
         }
 
         private function load($file){

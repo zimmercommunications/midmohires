@@ -13,6 +13,7 @@
             self::load('helpers');
             self::load('supports');
             self::load('menus');
+            // self::load('widgets');
         }
 
         private function load($file){
