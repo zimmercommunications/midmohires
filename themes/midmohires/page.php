@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <section class="section page-next-level">
-        <?php get_template_part("template-parts/content", "hero"); ?>
+        <?php get_template_part("template-parts/content", "single_hero"); ?>
     </section>
 
     <!-- CONTACT FORM START -->
