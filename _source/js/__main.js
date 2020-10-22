@@ -8,3 +8,4 @@
 // @prepros-prepend counter.int.js
 // @prepros-prepend app.js
 // @prepros-prepend home.js
+// @prepros-prepend archive.js
