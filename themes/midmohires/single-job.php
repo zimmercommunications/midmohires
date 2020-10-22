@@ -4,7 +4,7 @@
     <!-- end home -->
     <?php
     //Variables -- Declared Up Top and Unset at bottom
-      $ID = get_the_ID();
+      $post_ID = get_the_ID();
       $jobDescription = get_field('description', get_the_id() );
       $jobQualifications = get_field('qualifications', get_the_id() );
       $display_name = get_field('display_name', get_the_id());
@@ -103,7 +103,7 @@
 
 
                 <div class="col-lg-4 col-md-5 mt-4 mt-sm-0">
-                    <?php $args = array($companyTax, $ID); ?>
+                    <?php $args = array($companyTax, $post_ID); ?>
                     <?php get_template_part('template-parts/content', 'job_location', $args) ?>
 
                     <div style="background-color: #E1C128;" class="job-detail border rounded mt-4">
