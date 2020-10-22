@@ -49,7 +49,7 @@
                  <!-- Job Description Section  -->
                     <?php $args = array($jobDescription); ?>
                     <?php
-                    if(null !== $jobDescription){
+                    if($jobDescription){
                       echo '<div class="row">';
                       echo    '<div class="col-lg-12">';
                       echo        '<h5 class="text-dark mt-4">Job Description :</h5>';
@@ -67,7 +67,7 @@
 
                     <?php $args = array($jobQualifications); ?>
                     <?php
-                    if(null !== $jobQualifications){
+                    if($jobQualifications){
                       echo '<div class="row">';
                       echo    '<div class="col-lg-12">';
                       echo        '<h5 class="text-dark mt-4">Qualifications :</h5>';
@@ -82,7 +82,7 @@
                     <!-- Job Responsibilities Section Start -->
 
                     <?php
-                    if(null !== $jobResponsibilities){
+                    if($jobResponsibilities){
                       echo '<div class="row">';
                       echo    '<div class="col-lg-12">';
                       echo        '<h5 class="text-dark mt-4">Primary Responsibilities :</h5>';
