@@ -77,7 +77,44 @@ class Info_Sort{
     echo "Test";
     }
   }
+
+  //Should take the field_name argument and use it to look up similar fields in both Company & Job //Will Default to $job_field if data of $company_field is null
+  // Will only work if FIELD NAMES MATCH
+  function pick_field($field_name, $arg_id){
+    $companyTerms = get_the_terms($arg_id, 'company');
+    $company_field = get_fields($field_name, $companyTerms);
+    $job_field = get_field($field_name, $arg_id );
+
+    if($job_field != null && $company_field != null){
+      echo $job_field;
+    }
+    elseif($job_field != null && $company_field == null){
+      echo $job_field;
+    }
+    elseif($job_field == null && $company_field != null){
+      echo $company_field;
+    }
+    else{
+      echo "Test";
+    }
+  }
 }
+// Will take an array of field data, check if it exists, and then display the data as a sm logo.
+function display_logos($array){
+  foreach($array as $k => $v){
+    if($v){
+      echo '<li class="list-inline-item"><a href="' .  $v . '" class="rounded"><i class="mdi mdi-' . $k . '"></i></a></li>';
+    }
+
+  }
+}
+
+//DEPRICATED: Set to expire in 10/2023
+function isPresent($array){
+  display_logos($array);
+}
+
+//Helper Functions!
 
 function pick_job_address($arg_id = false){
   if(!$arg_id) $arg_id = get_the_ID();
@@ -88,3 +125,9 @@ function pick_job_website($arg_id = false){
   if(!$arg_id) $arg_id = get_the_ID();
   return Info_Sort::pick_website($arg_id);
 }
+
+function pick_job_field($field_name, $arg_id = false){
+  if(!$arg_id) $arg_id = get_the_ID();
+  return Info_Sort::pick_field($field_name, $arg_id);
+}
+?>
