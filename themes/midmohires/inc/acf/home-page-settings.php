@@ -1,11 +1,94 @@
 <?php
-if( function_exists('acf_add_local_field_group') ):
 
 //Add Homepage Settings Custom Fields
+if( function_exists('acf_add_local_field_group') ):
+
 acf_add_local_field_group(array(
 	'key' => 'group_5f86224cc67e4',
 	'title' => 'Home Page Settings',
 	'fields' => array(
+		array(
+			'key' => 'field_5f9088f7648f5',
+			'label' => 'Hero Section',
+			'name' => 'hero_section',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'layout' => 'block',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5f908930648f6',
+					'label' => 'Show Sponsorship',
+					'name' => 'show_sponsorship',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Show',
+					'ui_off_text' => 'Hide',
+				),
+				array(
+					'key' => 'field_5f908956648f7',
+					'label' => 'Show Coming Soon',
+					'name' => 'show_coming_soon',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => 'Show',
+					'ui_off_text' => 'Hide',
+				),
+				array(
+					'key' => 'field_5f90896b648f8',
+					'label' => 'Coming Soon Text',
+					'name' => 'coming_soon_text',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5f908956648f7',
+								'operator' => '==',
+								'value' => '1',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+			),
+		),
 		array(
 			'key' => 'field_5f8857320410b',
 			'label' => 'How it Works Section',

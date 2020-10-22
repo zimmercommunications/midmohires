@@ -3,7 +3,10 @@
 //
 body.admin-bar{
   #topnav{
-    top:32px;
+    top:0px;
+    @include notebook_small(){
+      top:32px;
+    }
   }
 }
 #topnav {
@@ -85,6 +88,11 @@ body.admin-bar{
         float: right;
         line-height: 68px;
         padding: 3px 0;
+        display: none;
+
+        @include notebook_small(){
+          display: block;
+        }
     }
     .navbar-toggle {
         &.open {

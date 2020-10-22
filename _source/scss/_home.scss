@@ -73,6 +73,19 @@
           left: calc(50% - 555px);
         }
 
+        .coming-soon{
+          font-size: 1.75em;
+          padding-bottom: 15px;
+          font-style: italic;
+          text-align: center;
+
+          @include notebook_small(){
+              text-align: left;
+              padding-bottom: 0px;
+              font-size: 2em;
+          }
+        }
+
         .logos{
 
           text-align: center;

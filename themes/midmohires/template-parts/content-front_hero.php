@@ -1,11 +1,17 @@
+<?php $hero = get_field('hero_section'); ?>
 <section class="bg-home">
     <div class="back">
         <div class="bg-layer"></div>
         <img class="people" src="<?php echo get_template_directory_uri() . '/assets/img/job-fair-dude.jpg'; ?>" />
         <img class="hands blend--color-dodge" src="<?php echo get_template_directory_uri() . '/assets/img/handshake.png'; ?>" />
         <div class="sponsor">
-            <div class="logos"><img class="bcjc-logo" src='<?php echo get_template_directory_uri() . "/assets/img/bcjc-logo-b.png"; ?>' alt="Boone County Joint Communications Logo" /><span class="plus">+</span><img class="zimmer-logo" src='<?php echo get_template_directory_uri() . "/assets/img/zimmer-bw.png"; ?>' alt="Zimmer Communications Logo" /></div>
-            <div class="proudly">a service of Boone County Joint Communications and Zimmer Communications</div>
+            <?php if($hero['show_sponsorship']) : ?>
+                <div class="logos"><img class="bcjc-logo" src='<?php echo get_template_directory_uri() . "/assets/img/bcjc-logo-b.png"; ?>' alt="Boone County Joint Communications Logo" /><span class="plus">+</span><img class="zimmer-logo" src='<?php echo get_template_directory_uri() . "/assets/img/zimmer-bw.png"; ?>' alt="Zimmer Communications Logo" /></div>
+                <div class="proudly">a service of Boone County Joint Communications and Zimmer Communications</div>
+            <?php endif; ?>
+            <?php if($hero['show_coming_soon']) : ?>
+                <div class="coming-soon"><?php echo $hero['coming_soon_text']; ?></div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="home-center">
