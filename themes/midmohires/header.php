@@ -42,8 +42,9 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-dark" height="25" />
                 </a>
             </div>
+            <?php $post_a_job = get_field('post_a_job_page', 'option'); ?>
             <div class="buy-button">
-                <a href="post-a-job.html" class="btn btn-primary"><i class="mdi mdi-cloud-upload"></i> Post a Job</a>
+                <a href="<?php echo get_permalink($post_a_job->ID); ?>" class="btn btn-primary"><i class="mdi mdi-cloud-upload"></i> Post a Job</a>
             </div><!--end login button-->
             <!-- End Logo container-->
             <div class="menu-extras">

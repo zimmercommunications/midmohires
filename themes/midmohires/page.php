@@ -4,6 +4,7 @@
         <?php get_template_part("template-parts/content", "hero"); ?>
     </section>
 
+    <!-- CONTACT FORM START -->
     <section class="section">
         <div class="container">
             <div class="row">
@@ -11,12 +12,6 @@
                     <?php the_content(); ?>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CONTACT FORM START -->
-    <section class="section">
-        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="text-dark mb-0">Get In Touch :</h4>
@@ -66,12 +61,18 @@
 
                 <div class="col-lg-4 col-md-5 mt-4 pt-2">
                     <div class="border rounded text-center p-4">
-                        <h5 class="text-dark pb-3">Contact Zimmer Communications</h5>
-                        <div class="contact-location rounded mt-5 p-4">
+                        <h5 class="text-dark pb-3">Zimmer Communications</h5>
+                        <div class="contact-location rounded mt-5 p-4" style="position: relative;">
                             <div class="contact-location-icon bg-white text-primary rounded-pill">
                                 <i class="mdi mdi-map-marker"></i>
                             </div>
                             <p class="text-muted pt-4 f-20 mb-0">3215 Lemone Industrial Blvd. Columbia, MO 65201</p>
+                        </div>
+                        <div class="contact-location rounded mt-5 p-4" style="position: relative;">
+                            <div class="contact-location-icon bg-white text-primary rounded-pill">
+                                <i class="mdi mdi-phone"></i>
+                            </div>
+                            <p class="text-muted pt-4 f-20 mb-0"><a href="tel:573-875-1099">(573) 875-1099</a></p>
                         </div>
                         <h6 class="text-muted mt-4 mb-0">Share</h6>
                         <ul class="list-unstyled social-icon mt-3 mb-0">
@@ -88,4 +89,4 @@
     <!-- CONTACT FORM END -->
 
 
-<?php get_foorter(); ?>
+<?php get_footer(); ?>
