@@ -11,6 +11,7 @@
             self::load('per-company-field');
             self::load('job-category-settings');
             self::load('theme-settings-api-keys');
+            self::load('theme-settings-pages');
 
             //Declare Option Pages
             add_action('acf/init', array('MidMo_Acf', 'option_pages'));
