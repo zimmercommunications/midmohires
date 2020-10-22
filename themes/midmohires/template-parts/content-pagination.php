@@ -30,7 +30,7 @@ if($total_pages > 1) :
         }
     }
 
-    showArray(paginate_links( array('type' => 'list') ));
+    showArray(wpdocs_get_paginated_links($wp_query));
 
 ?>
 
