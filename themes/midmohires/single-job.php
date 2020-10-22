@@ -1,6 +1,8 @@
 <?php get_header(); ?>
     <!-- Start home -->
-    <?php get_template_part("template-parts/content", "job_hero"); ?>
+    <section class="section page-next-level">
+        <?php get_template_part("template-parts/content", "job_hero"); ?>
+    </section>
     <!-- end home -->
     <?php
     //Variables -- Declared Up Top and Unset at bottom
@@ -11,7 +13,8 @@
       $jobResponsibilities = get_field('responsibilities', get_the_id() );
       $companyTax = get_the_terms(get_the_ID(), 'company');
       $companyLogo = get_field('logo', $companyTax[0]);
-      $companyLogoThumb = $companyLogo['sizes']['thumbnail'];
+      $companyLogoThumb = $companyLogo['sizes']['medium'];
+      $company = get_the_terms(get_the_id(), 'company');
 
      ?>
     <!-- JOB DETAILS START -->
@@ -24,7 +27,6 @@
                       if($display_name){
                         echo $display_name;
                       }
-                      unset($display_name);
                        ?>
                     </h4>
                 </div>
@@ -34,13 +36,12 @@
                   <!-- Job Overview Start -->
                   <div class="job-detail border rounded p-4">
                       <div class="job-detail-content">
-                          <img src="<?php echo $companyLogoThumb ?>" alt="" class="img-fluid float-left mr-md-3 mr-2 mx-auto d-block">
+                          <div class="single-job-company-logo float-left">
+                              <img src="<?php echo $companyLogoThumb ?>" alt="" class="img-fluid">
+                          </div>
                           <div class="job-detail-com-desc overflow-hidden d-block">
-                              <h4 class="mb-2"><a href="#" class="text-dark">
-                                <?php echo get_the_terms(get_the_id(), 'company')[0]->name; ?>
-
-                              </a></h4>
-                              <p style="height: 50px;" class="overflow-hidden text-muted mb-0 col-lg-6"><i class="mdi mdi-link-variant mr-2"></i> <?php echo pick_job_website(); ?></p>
+                              <h4 class="mb-2"><a href="#" class="text-dark"><?php echo $company[0]->name; ?></a></h4>
+                              <p class="overflow-hidden text-muted mb-0"><i class="mdi mdi-link-variant mr-2"></i><a href="<?php echo pick_job_website(); ?>"><?php echo $company[0]->name; ?> Website</a></p>
                               <p class="text-muted mb-0"><i class="mdi mdi-map-marker mr-2"></i> <?php echo pick_job_address(); ?></p>
                           </div>
                       </div>
