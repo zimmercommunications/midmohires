@@ -1,36 +1,65 @@
 <?php
 
-global $wp_query;
+global $wp_query, $paged;
 
 $total_pages = $wp_query->max_num_pages;
-$cur_page = $wp_query->paged;
+$cur_page = $paged;
 
 if($total_pages > 1) :
 
+    $pagination_links = wpdocs_get_paginated_links($wp_query);
+    $display_links = array();
     $display_pages_num = 4;
-    $display_first = true;
-    $display_prev = true;
-    $display_last = true;
-    $display_next = true;
-    $pages = array();
-
-    if($cur_page == $total_pages) {
-        $display_next = false;
-        $display_last = false;
+    $html = "";
+    $next_page_index = $cur_page;
+    if($cur_page == 0){
+        $cur_page = 1;
+        $next_page_index = $cur_page;
     }
 
-    if($cur_page == 1) {
-        $display_prev = false;
-        $display_first = false;
+    if($cur_page != 0 && $cur_page != 1) {
+        $html .= '<li class="page-item"><a class="page-link" href="' . $pagination_links[0]->url . '" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left f-15"></i></a></li>';
+        $html .= '<li class="page-item"><a class="page-link" href="' . $pagination_links[$cur_page - 2]->url . '" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-left f-15"></i></a></li>';
     }
 
     if($total_pages <= $display_pages_num){
-        for($i = 1; $i <= $total_pages; $i++){
-            //$pages[$i] = get_2_posts_page_link();
+        for($i = 0; $i < $total_pages; $i++){
+            $class = 'page-item';
+            if($cur_page == $i) {
+                $class .= ' active';
+            }
+            $html .= '<li class="' . $class . '"><a class="page-link" href="' . $pagination_links[$i]->url . '">' . ($i + 1) . '</a></li>';
+        }
+    } elseif($cur_page < 3) {
+        for($i = 0; $i < $display_pages_num; $i++){
+            $class = 'page-item';
+            if($cur_page - 1 == $i) {
+                $class .= ' active';
+            }
+            $html .= '<li class="' . $class . '"><a class="page-link" href="' . $pagination_links[$i]->url . '">' . ($i + 1) . '</a></li>';
+        }
+    } elseif($cur_page > $total_pages - ceil($display_pages_num / 2)) {
+        for($i = ($cur_page - 1) - floor($display_pages_num / 2); $i < $total_pages; $i++){
+            $class = 'page-item';
+            if($cur_page - 1 == $i) {
+                $class .= ' active';
+            }
+            $html .= '<li class="' . $class . '"><a class="page-link" href="' . $pagination_links[$i]->url . '">' . ($i + 1) . '</a></li>';
+        }
+    } else {
+        for($i = ($cur_page - 1) - floor($display_pages_num / 2); $i < ($cur_page - 1) + ceil($display_pages_num / 2); $i++){
+            $class = 'page-item';
+            if($cur_page - 1 == $i) {
+                $class .= ' active';
+            }
+            $html .= '<li class="' . $class . '"><a class="page-link" href="' . $pagination_links[$i]->url . '">' . ($i + 1) . '</a></li>';
         }
     }
 
-    showArray(wpdocs_get_paginated_links($wp_query));
+    if($cur_page != $total_pages) {
+        $html .= '<li class="page-item"><a class="page-link" href="' . $pagination_links[$next_page_index]->url . '" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-right f-15"></i></a></li>';
+        $html .= '<li class="page-item"><a class="page-link" href="' . $pagination_links[count($pagination_links) - 1]->url . '" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-right f-15"></i></a></li>';
+    }
 
 ?>
 
@@ -38,20 +67,7 @@ if($total_pages > 1) :
     <div class="col-lg-12 mt-4 pt-2">
         <nav aria-label="Page navigation example">
             <ul class="pagination job-pagination mb-0 justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                        <i class="mdi mdi-chevron-double-left f-15"></i>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <i class="mdi mdi-chevron-double-right f-15"></i>
-                    </a>
-                </li>
+                <?php echo $html; ?>
             </ul>
         </nav>
     </div>
