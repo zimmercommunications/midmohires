@@ -1,5 +1,9 @@
 <?php
-    global $wp_query;
+    global $wp_query, $paged;
+    $cur_page = $paged;
+    if($cur_page == 0){
+        $cur_page = 1;
+    }
     get_header();
 ?>
 
@@ -22,14 +26,9 @@
                     <div class="float-left">
                         <h5 class="text-dark mb-0 pt-2">Showing ( <?php echo $wp_query->post_count; ?> Jobs & Vacancies )</h5>
                     </div>
-                    <!-- <div class="sort-button float-right">
-                        <select class="nice-select rounded">
-                            <option data-display="Select">Nothing</option>
-                            <option value="1">Web Developer</option>
-                            <option value="2">PHP Developer</option>
-                            <option value="3">Web Designer</option>
-                        </select>
-                    </div> -->
+                    <div class="float-right">
+                        <small>Viewing page <?php echo $cur_page ?> of <?php echo $wp_query->max_num_pages ?></small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,7 +43,6 @@
                             $terms = new WP_Term_Query(array('taxonomy' => 'job_category', 'orderby' => 'name', 'order' => 'ASC'));
                             if(count($terms->get_terms()) > 0) :
                                 $cur_cat = "";
-                                if(isset($_GET['job_category'])) $cur_cat = $_GET['job_category'];
                         ?>
                         <div class="card rounded mt-4">
                             <a data-toggle="collapse" href="#companiesjobcat" class="job-list" aria-expanded="true" aria-controls="companiesjobcat">
@@ -57,7 +55,11 @@
 
                                     <?php foreach($terms->get_terms() as $term) : ?>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" id="job-category-checkbox-<?php echo $term->slug ?>" name="job_category" value="<?php echo $term->slug ?>" class="custom-control-input">
+                                        <?php
+                                            $checked = '';
+                                            if(isset($_GET['job_category']) && in_array($term->slug, $_GET['job_category'])) $checked = 'checked="checked"';
+                                        ?>
+                                        <input type="checkbox" <?php echo $checked ?> id="job-category-checkbox-<?php echo $term->slug ?>" name="job_category[]" value="<?php echo $term->slug ?>" class="custom-control-input">
                                         <label class="custom-control-label ml-1 text-muted" for="job-category-checkbox-<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
                                     </div>
                                     <?php endforeach; ?>
@@ -72,7 +74,6 @@
                             $terms = new WP_Term_Query(array('taxonomy' => 'company', 'orderby' => 'name', 'order' => 'ASC'));
                             if(count($terms->get_terms()) > 0) :
                                 $cur_cat = "";
-                                if(isset($_GET['company'])) $cur_cat = $_GET['company'];
                         ?>
                         <div class="card rounded mt-4">
                             <a data-toggle="collapse" href="#companiescollapse" class="job-list" aria-expanded="true" aria-controls="collapsetwo">
@@ -85,7 +86,11 @@
 
                                     <?php foreach($terms->get_terms() as $term) : ?>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" id="job-category-checkbox-<?php echo $term->slug ?>" name="company" value="<?php echo $term->slug ?>" class="custom-control-input">
+                                        <?php
+                                            $checked = '';
+                                            if(isset($_GET['company']) && in_array($term->slug, $_GET['company'])) $checked = 'checked="checked"';
+                                        ?>
+                                        <input type="checkbox" <?php echo $checked; ?> id="job-category-checkbox-<?php echo $term->slug ?>" name="company[]" value="<?php echo $term->slug ?>" class="custom-control-input">
                                         <label class="custom-control-label ml-1 text-muted" for="job-category-checkbox-<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
                                     </div>
                                     <?php endforeach; ?>
@@ -114,7 +119,7 @@
         </div>
 
         <?php get_template_part('template-parts/content', 'pagination'); ?>
-        
+
     </div>
 </section>
 

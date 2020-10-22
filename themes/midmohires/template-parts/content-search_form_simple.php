@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="home-registration-form p-4 mb-3">
-                <form class="registration-form" method="get" action="<?php echo get_post_type_archive_link('job') ?>">
+                <form class="registration-form" id="search-simple" method="get" action="<?php echo get_post_type_archive_link('job') ?>">
                     <div class="row">
                         <div class="col-lg-9 col-md-9">
                             <div class="registration-form-box">
