@@ -41,7 +41,6 @@
 
                         <!-- JOB CATEGORIES -->
                         <?php
-                            //Job Category Box
                             $terms = new WP_Term_Query(array('taxonomy' => 'job_category', 'orderby' => 'name', 'order' => 'ASC'));
                             if(count($terms->get_terms()) > 0) :
                                 $cur_cat = "";
@@ -57,9 +56,9 @@
                                 <div class="card-body p-0">
 
                                     <?php foreach($terms->get_terms() as $term) : ?>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="job-category-radio-<?php echo $term->slug ?>" name="job_category" value="<?php echo $term->slug ?>" class="custom-control-input">
-                                        <label class="custom-control-label ml-1 text-muted" for="job-category-radio-<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="job-category-checkbox-<?php echo $term->slug ?>" name="job_category" value="<?php echo $term->slug ?>" class="custom-control-input">
+                                        <label class="custom-control-label ml-1 text-muted" for="job-category-checkbox-<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
                                     </div>
                                     <?php endforeach; ?>
 
@@ -70,7 +69,6 @@
 
                         <!-- COMPANIES -->
                         <?php
-                            //Job Category Box
                             $terms = new WP_Term_Query(array('taxonomy' => 'company', 'orderby' => 'name', 'order' => 'ASC'));
                             if(count($terms->get_terms()) > 0) :
                                 $cur_cat = "";
@@ -86,9 +84,9 @@
                                 <div class="card-body p-0">
 
                                     <?php foreach($terms->get_terms() as $term) : ?>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="job-category-radio-<?php echo $term->slug ?>" name="company" value="<?php echo $term->slug ?>" class="custom-control-input">
-                                        <label class="custom-control-label ml-1 text-muted" for="job-category-radio-<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="job-category-checkbox-<?php echo $term->slug ?>" name="company" value="<?php echo $term->slug ?>" class="custom-control-input">
+                                        <label class="custom-control-label ml-1 text-muted" for="job-category-checkbox-<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
                                     </div>
                                     <?php endforeach; ?>
 
@@ -115,28 +113,8 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-12 mt-4 pt-2">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination job-pagination mb-0 justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                <i class="mdi mdi-chevron-double-left f-15"></i>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                <i class="mdi mdi-chevron-double-right f-15"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <?php get_template_part('template-parts/content', 'pagination'); ?>
+        
     </div>
 </section>
 
