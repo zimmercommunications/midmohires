@@ -13,8 +13,11 @@ $linkedin = get_field('social-linkedin', $company[0]);
 $instagram = get_field('social-ig', $company[0]);
 
  ?>
+ <div style="background-color: #E1C128;" class="job-detail border rounded mb-2">
+     <a target="_blank" href="<?php pick_job_website(); ?>" class="btn btn-secondary btn-block">Apply For Job</a>
+ </div>
 <div class="job-detail border rounded p-4">
-    <h5 class="text-muted text-center pb-2"><i class="mdi mdi-map-marker mr-2"></i>Location</h5>
+    <h5 class="text-muted text-center pb-2"><i class="mdi mdi-information-variant mr-2"></i>Company Info</h5>
 
     <div class="job-detail-location pt-4 border-top">
       <!-- Address -->
@@ -72,9 +75,9 @@ $instagram = get_field('social-ig', $company[0]);
             echo '</div>';
           }
            ?>
-
+           <!-- Google Map -->
         <?php
-        $google_lookup = str_replace(' ', '+', pick_field_job('google_maps_lookup'));
+        $google_lookup = urlencode(pick_field_job('google_maps_lookup'));
         $google_src = "https://www.google.com/maps/embed/v1/place?key=" . get_field('google_api_setting', 'option') . "&q=" . $google_lookup;
         if($google_lookup){
           echo '<h5 class="text-dark">Job Location</h5>';

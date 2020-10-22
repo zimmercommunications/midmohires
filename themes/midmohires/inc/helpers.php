@@ -114,7 +114,7 @@ class Info_Sort{
     $companyTerms = get_the_terms($arg_id, 'company');
     $company_field = get_field($field_name, $companyTerms[0]);
     $job_field = get_field($field_name, $arg_id );
-    
+
     if($job_field) return $job_field;
     if($company_field) return $company_field;
     return false;
@@ -125,7 +125,7 @@ class Info_Sort{
 function display_logos($array){
   foreach($array as $k => $v){
     if($v){
-      echo '<li class="list-inline-item"><a href="' .  $v . '" class="rounded"><i class="mdi mdi-' . $k . '"></i></a></li>';
+      echo '<li class="list-inline-item"><a target="_blank" href="' .  $v . '" class="rounded"><i class="mdi mdi-' . $k . '"></i></a></li>';
     }
 
   }
