@@ -1,0 +1,62 @@
+.single-job-company-logo{
+
+  float: none!important;
+  width: 150px;
+  height: 90px;
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0 auto 20px;
+
+  img{
+    display: inline;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @include notebook_small(){
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 0;
+    height: 100%;
+
+    img{
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+}
+.job-detail-content{
+
+  @include notebook_small(){
+    height: 130px;
+    position: relative;
+    &:after{
+      display: block;
+      height: 0;
+      width: 0;
+      content: "";
+      clear: both;
+    }
+  }
+
+}
+.job-detail-com-desc{
+
+  @include notebook_small(){
+    position: absolute;
+    top: 50%;
+    left: 175px;
+    width: calc(100% - 175px);
+    transform: translate(0, -50%);
+  }
+
+}
