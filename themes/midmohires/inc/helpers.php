@@ -74,7 +74,7 @@ class Info_Sort{
       echo $company_website;
     }
     else{
-    echo "Test";
+      echo "Test";
     }
   }
 
@@ -97,6 +97,28 @@ class Info_Sort{
     else{
       echo "Test";
     }
+  }
+  //Will favor company fields over job fields
+  function pick_field_company($field_name, $arg_id){
+    $companyTerms = get_the_terms($arg_id, 'company');
+    $company_field = get_fields($field_name, $companyTerms);
+    $job_field = get_field($field_name, $arg_id );
+
+    if($company_field) return $company_field;
+    if($job_field) return $job_field;
+    return false;
+
+  }
+  //Will favor job fields over company fields
+  function pick_field_job($field_name, $arg_id){
+    $companyTerms = get_the_terms($arg_id, 'company');
+    $company_field = get_field($field_name, $companyTerms[0]);
+    $job_field = get_field($field_name, $arg_id );
+    
+    if($job_field) return $job_field;
+    if($company_field) return $company_field;
+    return false;
+
   }
 }
 // Will take an array of field data, check if it exists, and then display the data as a sm logo.
@@ -129,6 +151,14 @@ function pick_job_website($arg_id = false){
 function pick_job_field($field_name, $arg_id = false){
   if(!$arg_id) $arg_id = get_the_ID();
   return Info_Sort::pick_field($field_name, $arg_id);
+}
+function pick_field_job($field_name, $arg_id = false){
+  if(!$arg_id) $arg_id = get_the_ID();
+  return Info_Sort::pick_field_job($field_name, $arg_id);
+}
+function pick_field_company($field_name, $arg_id = false){
+  if(!$arg_id) $arg_id = get_the_ID();
+  return Info_Sort::pick_field_company($field_name, $arg_id);
 }
 
 function time_elapsed_string($datetime, $full = false) {
