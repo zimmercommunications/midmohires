@@ -25,7 +25,7 @@ if($total_pages > 1) :
     if($total_pages <= $display_pages_num){
         for($i = 0; $i < $total_pages; $i++){
             $class = 'page-item';
-            if($cur_page == $i) {
+            if($cur_page - 1 == $i) {
                 $class .= ' active';
             }
             $html .= '<li class="' . $class . '"><a class="page-link" href="' . $pagination_links[$i]->url . '">' . ($i + 1) . '</a></li>';
