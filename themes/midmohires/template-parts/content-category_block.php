@@ -1,5 +1,5 @@
 <div class="col-lg-3 col-md-6 mt-4 pt-2">
-    <a href="<?php echo get_term_link($args['term']); ?>">
+    <a href="<?php echo get_post_type_archive_link('job'); ?>?job_category%5B%5D=<?php echo $args['term']->slug ?>">
         <div class="popu-category-box bg-light rounded text-center p-4">
             <div class="popu-category-icon mb-3">
                 <?php
