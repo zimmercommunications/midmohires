@@ -30,46 +30,6 @@ get_header();
           ?>
         </div>
 
-        <!-- OLD FORM TO BE DELETED -->
-        <div class="custom-form rounded border p-4">
-          <div id="message"></div>
-          <form method="post" action="#" name="contact-form" id="contact-form">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group app-label">
-                  <label class="text-muted">Name</label>
-                  <input name="name" id="name2" type="text" class="form-control resume" placeholder="Enter Name..">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group app-label">
-                  <label class="text-muted">Email address</label>
-                  <input name="email" id="email1" type="email" class="form-control resume" placeholder="Enter Email..">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group app-label">
-                  <label class="text-muted">Subject</label>
-                  <input type="text" class="form-control resume" id="subject" placeholder="Subject..">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group app-label">
-                  <label class="text-muted">Message</label>
-                  <textarea name="comments" id="comments" rows="5" class="form-control resume" placeholder="Message.."></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary" value="Send Message">
-                <div id="simple-msg"></div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <!-- OLD FORM TO BE DELETED -->
-
       </div>
 
       <div class="col-lg-4 col-md-5 mt-4 pt-2">
