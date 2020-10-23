@@ -14,6 +14,9 @@
             self::load('supports');
             self::load('menus');
             self::load('widgets');
+            self::load('connections');
+            self::load('ajax');
+
         }
 
         private function load($file){

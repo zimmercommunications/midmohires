@@ -19,7 +19,7 @@
                     <i class="mdi mdi-file-document-box h1 text-white"></i>
                 </div>
                 <div class="counter-content overflow-hidden">
-                    <h1 class="counter-value text-white mb-1" data-count="526">80</h1>
+                    <h1 class="counter-value text-white mb-1" data-count="<?php Counters::connections(); ?>">0</h1>
                     <p class="counter-name text-white text-uppercase mb-0">Connections</p>
                 </div>
             </div>
