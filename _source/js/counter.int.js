@@ -1,7 +1,7 @@
 // counter
 var a = 0;
 $(window).scroll(function() {
-  if(typeof $('#counter') !== 'undefined'){
+  if(typeof $('#counter') !== 'undefined' && $('#counter').length > 0){
     var oTop = $('#counter').offset().top - window.innerHeight;
     if (a == 0 && $(window).scrollTop() > oTop) {
         $('.counter-value').each(function() {

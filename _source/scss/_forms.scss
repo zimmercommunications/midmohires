@@ -1,0 +1,89 @@
+.form-group {
+  margin-bottom: 20px;
+
+  .gform_wrapper{
+
+    .gform_footer{
+      input{
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+        background: #333;
+        border: 1px solid #333;
+        padding: 8px 20px;
+        outline: none;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        transition: all 0.3s;
+        font-weight: 600;
+        border-radius: 10px;
+        text-align: center;
+        vertical-align: middle;
+
+
+
+
+
+      }
+    }
+
+    .gform_body{
+
+      ul{
+
+        li.gfield{
+          border: none;
+          margin-bottom: 20px;
+
+          input,
+          input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+            display: block;
+            width: 100%;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            box-shadow: none;
+            border: 1px solid #dee2e6;
+            font-size: 13px;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+            width: 100%;
+            height: auto;
+            padding: 10px 15px;
+          }
+
+        }
+
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 700;
+        color: #8492a6 !important;
+      }
+
+      .form-control {
+        box-shadow: none;
+        border: 1px solid $gray-300;
+        height: 42px;
+        font-size: 13px;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        &:focus, &.active {
+          border-color: $primary;
+        }
+      }
+      textarea {
+        height: 120px !important;
+        &.form-control {
+          line-height: 25px;
+        }
+      }
+    }
+
+  }
+
+}
