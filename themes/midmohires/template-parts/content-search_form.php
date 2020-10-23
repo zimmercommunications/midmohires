@@ -22,7 +22,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="registration-form-box">
                                 <i class="fa fa-building"></i>
-                                <select id="select-company" name="company" class="demo-default">
+                                <select id="select-company" name="company[]" class="demo-default">
                                     <option value="">Company</option>
                                     <?php foreach($terms->get_terms() as $term) : ?>
                                         <option <?php if($cur_company == $term->slug) echo 'selected="selected"'; ?> value="<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>
@@ -42,7 +42,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="registration-form-box">
                                 <i class="fa fa-list-alt"></i>
-                                <select id="select-category" name="job_category" class="demo-default">
+                                <select id="select-category" name="job_category[]" class="demo-default">
                                     <option value="">Category</option>
                                     <?php foreach($terms->get_terms() as $term) : ?>
                                         <option <?php if($cur_cat == $term->slug) echo 'selected="selected"'; ?> value="<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>

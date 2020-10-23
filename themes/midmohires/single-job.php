@@ -154,5 +154,6 @@ $company = get_the_terms(get_the_id(), 'company');
 <?php
 //Variables -- Declared Up Top and Unset at bottom
 unset($jobDescription);
+record_view();
 ?>
 <?php get_footer(); ?>

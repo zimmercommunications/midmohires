@@ -40,15 +40,47 @@ function record_connection($job_id){
     die();
 }
 
+//Record a View
+function record_view($jid = false){
+    if(!$jid) $jid = get_the_ID();
+    $views = get_post_meta($jid, 'views', true);
+    if(is_numeric($views)){
+        $views++;
+    } else {
+        $views = 1;
+    }
+    update_post_meta($jid, 'views', $views);
+}
+
+//Record an Impression
+function record_impression($jid = false){
+    if(!$jid) $jid = get_the_ID();
+    $impressions = get_post_meta($jid, 'impressions', true);
+    if(is_numeric($impressions)){
+        $impressions++;
+    } else {
+        $impressions = 1;
+    }
+    update_post_meta($jid, 'impressions', $impressions);
+}
+
 //Add Job Post Type Custom Columns
 add_filter( 'manage_job_posts_columns', 'connections_job_posts_columns' );
 function connections_job_posts_columns( $columns ) {
+    $columns['impressions'] = __( 'Impressions' );
+    $columns['views'] = __( 'Views' );
     $columns['connections'] = __( 'Connections' );
     return $columns;
 }
 add_action( 'manage_job_posts_custom_column', 'connections_job_posts_column_content', 10, 2);
 function connections_job_posts_column_content( $column, $post_id ) {
-  if ( 'connections' === $column ) {
-    echo get_post_meta( $post_id, 'connections', true );
-  }
+    if ( 'impressions' === $column ) {
+        echo get_post_meta( $post_id, 'impressions', true );
+    }
+    if ( 'views' === $column ) {
+        echo get_post_meta( $post_id, 'views', true );
+    }
+    if ( 'connections' === $column ) {
+        echo get_post_meta( $post_id, 'connections', true );
+    }
 }

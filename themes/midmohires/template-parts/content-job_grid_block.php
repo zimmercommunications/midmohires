@@ -25,6 +25,7 @@ $salary = get_field("salary");
 
 $jobType = get_field("job_type")[0];
 
+record_impression();
 
 ?>
 <div class="col-lg-4 col-md-6 mt-4 pt-2">
