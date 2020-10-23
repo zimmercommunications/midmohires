@@ -32,7 +32,7 @@
         public static function frontend_styles(){
 
             //The Main Theme CSS style
-            wp_enqueue_style( 'midmo-main', get_template_directory_uri() . '/assets/css/style.min.css', false, time());
+            wp_enqueue_style( 'midmo-main', get_template_directory_uri() . '/assets/css/style.min.css', array('gforms_formsmain_css'), time());
 
         }
 
@@ -40,7 +40,8 @@
         public static function frontend_scripts(){
 
             //The Main Theme JS Script
-            wp_enqueue_script( 'midmo-main', get_template_directory_uri() . '/assets/js/main.min.js', false, time(), true);
+            wp_enqueue_script( 'jquery' );
+            wp_enqueue_script( 'midmo-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), time(), true);
 
         }
 
