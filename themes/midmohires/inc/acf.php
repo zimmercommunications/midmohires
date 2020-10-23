@@ -12,6 +12,7 @@
             self::load('job-category-settings');
             self::load('theme-settings-api-keys');
             self::load('theme-settings-pages');
+            self::load('theme-settings-analytics');
 
             //Declare Option Pages
             add_action('acf/init', array('MidMo_Acf', 'option_pages'));

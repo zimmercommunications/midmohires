@@ -9,3 +9,4 @@
 // @prepros-prepend app.js
 // @prepros-prepend home.js
 // @prepros-prepend archive.js
+// @prepros-prepend single-job.js

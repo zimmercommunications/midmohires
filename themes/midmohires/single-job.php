@@ -136,11 +136,15 @@ $company = get_the_terms(get_the_id(), 'company');
 
 
             <div class="col-lg-4 col-md-5 mt-4 mt-sm-0">
+                <div style="background-color: #E1C128;" class="job-detail border rounded mb-2">
+                    <a target="_blank" href="<?php pick_job_website(); ?>" class="btn btn-secondary btn-block apply-button" data-jid="<?php echo get_the_ID(); ?>">Apply For Job</a>
+                </div>
+
                 <?php $args = array($companyTax, $post_ID); ?>
                 <?php get_template_part('template-parts/content', 'job_location', $args) ?>
 
                 <div style="background-color: #E1C128;" class="job-detail border rounded mt-4">
-                    <a target="_blank" href="<?php pick_job_website(); ?>" class="btn btn-secondary btn-block">Apply For Job</a>
+                    <a target="_blank" href="<?php pick_job_website(); ?>" class="btn btn-secondary btn-block apply-button" data-jid="<?php echo get_the_ID(); ?>">Apply For Job</a>
                 </div>
             </div>
         </div>

@@ -13,9 +13,7 @@ $linkedin = get_field('social-linkedin', $company[0]);
 $instagram = get_field('social-ig', $company[0]);
 
  ?>
- <div style="background-color: #E1C128;" class="job-detail border rounded mb-2">
-     <a target="_blank" href="<?php pick_job_website(); ?>" class="btn btn-secondary btn-block">Apply For Job</a>
- </div>
+
 <div class="job-detail border rounded p-4">
     <h5 class="text-muted text-center pb-2"><i class="mdi mdi-information-variant mr-2"></i>Company Info</h5>
 
