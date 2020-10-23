@@ -36,7 +36,7 @@ $company = get_the_terms(get_the_id(), 'company');
         <div class="row">
             <div class="col-lg-8 col-md-7">
                 <!-- Job Overview Start -->
-                <div class="job-detail border rounded p-4">
+                <div style="height: auto" class="job-detail border rounded p-3">
                     <div class="job-detail-content">
                         <div class="single-job-company-logo float-left">
                             <img src="<?php echo $companyLogoThumb ?>" alt="" class="img-fluid">
@@ -47,6 +47,12 @@ $company = get_the_terms(get_the_id(), 'company');
                             <p class="text-muted mb-0"><i class="mdi mdi-map-marker mr-2"></i> <?php echo pick_job_address(); ?></p>
                         </div>
                     </div>
+                    <div class="job-detail-content">
+                      <div class="job-detail-desc">
+                        <p class="text-muted mb-3"><?php echo $companyTax[0]->description; ?></p>
+                      </div>
+                    </div>
+
                 </div>
                 <!-- Job Overview End -->
                 <!-- Job Description Section  -->
