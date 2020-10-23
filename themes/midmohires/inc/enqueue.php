@@ -32,7 +32,7 @@
         public static function frontend_styles(){
 
             //The Main Theme CSS style
-            wp_enqueue_style( 'midmo-main', get_template_directory_uri() . '/assets/css/style.min.css', false, time());
+            wp_enqueue_style( 'midmo-main', get_template_directory_uri() . '/assets/css/style.min.css', array('gforms_formsmain_css'), time());
 
         }
 

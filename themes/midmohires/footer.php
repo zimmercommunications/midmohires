@@ -3,15 +3,6 @@
     <div class="container">
         <div class="row">
           <!-- Footer Widget 1 -->
-            <style>
-              .centerItem{
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: auto;
-                margin-bottom: auto;
-              }
-            </style>
             <?php dynamic_sidebar('Footer Widget 1'); ?>
             <!-- Footer Widget 2 -->
             <?php dynamic_sidebar('Footer Widget 2'); ?>
