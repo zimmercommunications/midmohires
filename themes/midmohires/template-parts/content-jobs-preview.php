@@ -29,9 +29,9 @@ $location = get_field("location");
 
 $salary = get_field("salary");
 
-
 $jobType = get_field("job_type")[0];
 
+record_impression();
 
 ?>
 
