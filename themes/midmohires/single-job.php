@@ -47,9 +47,9 @@ $company = get_the_terms(get_the_id(), 'company');
                             <p class="text-muted mb-0"><i class="mdi mdi-map-marker mr-2"></i> <?php echo pick_job_address(); ?></p>
                         </div>
                     </div>
-                    <div class="job-detail-content">
+                    <div>
                       <div class="job-detail-desc">
-                        <p class="text-muted mb-3"><?php echo $companyTax[0]->description; ?></p>
+                        <p class="text-muted mb-3"><?php echo get_field('description', $company[0]); ?></p>
                       </div>
                     </div>
 

@@ -110,7 +110,7 @@ class Info_Sort{
     //Will favor company fields over job fields
     function pick_field_company($field_name, $arg_id){
         $companyTerms = get_the_terms($arg_id, 'company');
-        $company_field = get_fields($field_name, $companyTerms);
+        $company_field = get_field($field_name, $companyTerms);
         $job_field = get_field($field_name, $arg_id );
 
         if($company_field) return $company_field;

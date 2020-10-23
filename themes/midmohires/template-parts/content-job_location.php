@@ -47,7 +47,7 @@ $instagram = get_field('social-ig', $company[0]);
           echo '<div class="float-left mr-2">';
           echo '<i class="mdi mdi-web text-muted"></i>';
           echo '</div>';
-          echo '<p style="white-space: nowrap height: 25px;" class="text-muted mb-2 overflow-hidden">: <a href="' . pick_field_job('website_url')  .'">' . str_replace(array('https://', 'https://', 'www.'), '', pick_field_job('website_url')) . '</a></p>';
+          echo '<p style="white-space: nowrap; height: 25px;" class="text-muted mb-2 overflow-hidden">: <a href="' . pick_field_company('website_url')  .'">' . str_replace(array('https://', 'https://', 'www.'), '', pick_field_company('website_url')) . '</a></p>';
           echo '</div>';
         }
          ?>
