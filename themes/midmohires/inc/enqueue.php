@@ -47,6 +47,9 @@
         //Used for backend only styles
         public static function backend_styles(){
 
+            //The Admin CSS style
+            wp_enqueue_style( 'midmo-admin', get_template_directory_uri() . '/assets/css/admin.min.css', false, time());
+
         }
 
         //Used for backend only scripts
