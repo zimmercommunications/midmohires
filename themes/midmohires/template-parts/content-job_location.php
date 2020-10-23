@@ -27,7 +27,7 @@ $instagram = get_field('social-ig', $company[0]);
         echo '  <div class="float-left mr-2">';
         echo '    <i class="mdi mdi-bank text-muted"></i>';
         echo '  </div>';
-        echo '  <p class="text-muted mb-2">: ' . pick_field_job('location') . '</p>';
+        echo '  <p style="white-space: nowrap;" class="text-muted mb-2">: ' . pick_field_job('location') . '</p>';
         echo '</div>';
       }
        ?>
@@ -38,7 +38,7 @@ $instagram = get_field('social-ig', $company[0]);
          echo '<div class="float-left mr-2">';
          echo '<i class="mdi mdi-email text-muted"></i>';
          echo '</div>';
-         echo '<p class="text-muted mb-2">: <a href="mailto:' . $email . '">' . $email . '</a></p>';
+         echo '<p style="white-space: nowrap; "class="text-muted mb-2">: <a href="mailto:' . $email . '">' . $email . '</a></p>';
          echo '</div>';
        }
         ?>
@@ -49,7 +49,7 @@ $instagram = get_field('social-ig', $company[0]);
           echo '<div class="float-left mr-2">';
           echo '<i class="mdi mdi-web text-muted"></i>';
           echo '</div>';
-          echo '<p style="height: 25px;" class="text-muted mb-2 overflow-hidden">: <a href="' . pick_field_job('website_url')  .'">' . str_replace(array('https://', 'https://', 'www.'), '', pick_field_job('website_url')) . '</a></p>';
+          echo '<p style="white-space: nowrap height: 25px;" class="text-muted mb-2 overflow-hidden">: <a href="' . pick_field_job('website_url')  .'">' . str_replace(array('https://', 'https://', 'www.'), '', pick_field_job('website_url')) . '</a></p>';
           echo '</div>';
         }
          ?>
