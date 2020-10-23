@@ -38,18 +38,18 @@ $instagram = get_field('social-ig', $company[0]);
          echo '<div class="float-left mr-2">';
          echo '<i class="mdi mdi-email text-muted"></i>';
          echo '</div>';
-         echo '<p class="text-muted mb-2">: ' . $email . '</p>';
+         echo '<p class="text-muted mb-2">: <a href="mailto:' . $email . '">' . $email . '</a></p>';
          echo '</div>';
        }
         ?>
         <!-- Website URL -->
         <?php
-        if( pick_field_job('website_url') ){
+        if( pick_field_company('website_url') ){
           echo '<div class="job-details-desc-item">';
           echo '<div class="float-left mr-2">';
           echo '<i class="mdi mdi-web text-muted"></i>';
           echo '</div>';
-          echo '<p style="height: 25px;" class="text-muted mb-2 overflow-hidden">: ' . pick_field_job('website_url')  .'</p>';
+          echo '<p style="height: 25px;" class="text-muted mb-2 overflow-hidden">: <a href="' . pick_field_job('website_url')  .'">' . str_replace(array('https://', 'https://', 'www.'), '', pick_field_job('website_url')) . '</a></p>';
           echo '</div>';
         }
          ?>
@@ -60,7 +60,7 @@ $instagram = get_field('social-ig', $company[0]);
            echo '<div class="float-left mr-2">';
            echo '<i class="mdi mdi-cellphone-iphone text-muted"></i>';
            echo '</div>';
-           echo '<p style="height: 25px;" class="text-muted mb-2 overflow-hidden">: ' . $phone  .'</p>';
+           echo '<p style="height: 25px;" class="text-muted mb-2 overflow-hidden">: <a href="tel:' . $phone  .'">' . $phone . '</a></p>';
            echo '</div>';
          }
           ?>
@@ -71,7 +71,7 @@ $instagram = get_field('social-ig', $company[0]);
             echo '<div class="float-left mr-2">';
             echo '<i class="mdi mdi-currency-usd text-muted"></i>';
             echo '</div>';
-            echo '<p class="text-muted mb-2">:' . $salary . '</p>';
+            echo '<p class="text-muted mb-2">: ' . $salary . '</p>';
             echo '</div>';
           }
            ?>

@@ -43,7 +43,7 @@ $company = get_the_terms(get_the_id(), 'company');
                         </div>
                         <div class="job-detail-com-desc overflow-hidden d-block">
                             <h4 class="mb-2"><a href="#" class="text-dark"><?php echo $company[0]->name; ?></a></h4>
-                            <p class="overflow-hidden text-muted mb-0"><i class="mdi mdi-link-variant mr-2"></i><a href="<?php echo pick_job_website(); ?>"><?php echo $company[0]->name; ?> Website</a></p>
+                            <p class="overflow-hidden text-muted mb-0"><i class="mdi mdi-link-variant mr-2"></i><a href="<?php echo pick_job_website(); ?>">Apply Now <?php //echo $company[0]->name; ?> </a></p>
                             <p class="text-muted mb-0"><i class="mdi mdi-map-marker mr-2"></i> <?php echo pick_job_address(); ?></p>
                         </div>
                     </div>
