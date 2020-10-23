@@ -25,7 +25,9 @@ get_header();
       <div class="col-lg-8 col-md-7 mt-4 pt-2">
 
         <div class="custom-form rounded border p-4 form-group">
-          <?php gravity_form(get_field('gravity_form_id'), false, false); ?>
+          <?php
+            gravity_form(get_field('gravity_form_id'), false, false);
+          ?>
         </div>
 
         <!-- OLD FORM TO BE DELETED -->

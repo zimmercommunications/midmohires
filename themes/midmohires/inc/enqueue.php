@@ -40,7 +40,8 @@
         public static function frontend_scripts(){
 
             //The Main Theme JS Script
-            wp_enqueue_script( 'midmo-main', get_template_directory_uri() . '/assets/js/main.min.js', false, time(), true);
+            wp_enqueue_script( 'jquery' );
+            wp_enqueue_script( 'midmo-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), time(), true);
 
         }
 
