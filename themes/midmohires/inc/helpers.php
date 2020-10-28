@@ -25,20 +25,13 @@ function showArray($array){
 //Class to help with counters template section on the home template
 class Counters{
     public static function jobs(){
-        $count = 0;
-        foreach( get_posts( array('post_type' => 'Job')) as $i){
-            // what to do while in each item of the array
-            $count += 1;
-        }
-        echo $count;
+        $posts = get_posts( array('post_type' => 'job', 'posts_per_page' => -1));
+        echo count($posts);
     }
     public static function companies(){
         $count = 0;
-        foreach( get_terms( array('taxonomy' => 'Company')) as $i){
-            // what to do while in each item of the array
-            $count += 1;
-        }
-        echo $count;
+        $companies = get_terms( array('taxonomy' => 'company', 'posts_per_page' => -1));
+        echo count($companies);
     }
     public static function connections(){
         $count = get_option('connections');
