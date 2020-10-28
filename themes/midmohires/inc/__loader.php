@@ -18,6 +18,7 @@
             self::load('ajax');
             self::load('analytics');
             self::load('get_posts');
+            self::load('oembeds');
 
         }
 
