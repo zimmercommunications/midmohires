@@ -77,6 +77,7 @@
                             $args = array(
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
+                                'orderby' => 'rand',
                                 'meta_query' => array(
                                   array(
                                     'key' => 'job_type',
@@ -116,6 +117,7 @@
                             $args = array(
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
+                                'orderby' => 'rand',
                                 'meta_query' => array(
                                   array(
                                     'key' => 'job_type',
