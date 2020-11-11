@@ -8,7 +8,7 @@
     </div>
     <div class="row">
       <?php
-      $query = new WP_Term_Query( array('taxonomy' => 'job_category') );
+      $query = new WP_Term_Query( array('taxonomy' => 'job_category', 'orderby' => 'name') );
 
       foreach ( $query->terms as $term ) {
         get_template_part('template-parts/content', 'category_block', array('term' => $term));
