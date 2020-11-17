@@ -38,6 +38,7 @@
                             $args = array(
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
+                                'has_password' => false,
                                 'meta_query' => array(
                                   array(
                                     'key' => 'featured',
@@ -78,6 +79,7 @@
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
                                 'orderby' => 'rand',
+                                'has_password' => false,
                                 'meta_query' => array(
                                   array(
                                     'key' => 'job_type',
@@ -118,6 +120,7 @@
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
                                 'orderby' => 'rand',
+                                'has_password' => false,
                                 'meta_query' => array(
                                   array(
                                     'key' => 'job_type',
