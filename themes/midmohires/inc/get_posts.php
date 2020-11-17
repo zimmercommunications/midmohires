@@ -38,3 +38,14 @@ function set_order_to_rand($query){
     }
     return $query;
 }
+
+//Make orderby random on find jobs page without order set
+add_filter('pre_get_posts', 'exclude_password_protect_jobs_from_all_queries_except_single_page');
+function exclude_password_protect_jobs_from_all_queries_except_single_page($query){
+    if(!is_admin()){
+        if(!is_single() || ($query->get('post_type') !== 'job' && is_single())){
+            $query->set('has_password', false);
+        }
+    }
+    return $query;
+}
