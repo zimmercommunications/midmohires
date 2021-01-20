@@ -38,13 +38,14 @@
                             $args = array(
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
+                                'orderby' => 'rand',
                                 'has_password' => false,
-                                'meta_query' => array(
-                                  array(
-                                    'key' => 'featured',
-                                    'value' => 1,
-                                  ),
-                                )
+                                // 'meta_query' => array(
+                                //   array(
+                                //     'key' => 'featured',
+                                //     'value' => 1,
+                                //   ),
+                                // )
 
                             );
                             //starting the query
