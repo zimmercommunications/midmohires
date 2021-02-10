@@ -10,7 +10,8 @@
     <div class="row align-items-center">
         <?php
             //Setting a querry for terms
-            $query = new WP_Term_Query( array('taxonomy' => 'company', 'orderby' => 'rand') );
+            $query = new WP_Term_Query( array('taxonomy' => 'company') );
+            shuffle($query->terms);
             foreach ($query->terms as $term){
                 if(get_field('display_on_front_page', $term)){
                     get_template_part( 'template-parts/content', 'company_block', array('term' => $term) );
