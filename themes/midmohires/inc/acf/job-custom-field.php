@@ -224,7 +224,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_5f8ddfeb9a284',
 			'label' => 'Website URL',
 			'name' => 'website_url',
-			'type' => 'url',
+			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
