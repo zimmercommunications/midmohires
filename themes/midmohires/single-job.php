@@ -13,6 +13,7 @@ $display_name = get_field('display_name', get_the_id());
 $jobResponsibilities = get_field('responsibilities', get_the_id() );
 $jobCompensation = get_field('compensation', get_the_id() );
 $jobMoreInfo = get_field('more_info', get_the_id() );
+$jobHowToApply = get_field('how_to_apply', get_the_id() );
 $companyTax = get_the_terms(get_the_ID(), 'company');
 $companyLogo = get_field('logo', $companyTax[0]);
 $companyLogoThumb = $companyLogo['sizes']['medium'];
@@ -136,6 +137,22 @@ $company = get_the_terms(get_the_id(), 'company');
                 ?>
 
                 <!-- Job More Info Section End  -->
+
+                <!-- How to Apply Section Start  -->
+
+                <?php $args = array($jobHowToApply); ?>
+                <?php
+                if($jobMoreInfo){
+                    echo '<div class="row">';
+                    echo    '<div class="col-lg-12">';
+                    echo        '<h5 class="text-dark mt-4">How to Apply :</h5>';
+                    echo    '</div>';
+                    echo '</div>';
+                    get_template_part("template-parts/content", "job_how_to_apply", $args);
+                }
+                ?>
+
+                <!-- How to Apply Section End  -->
 
             </div>
             <!-- Left Section End -->
