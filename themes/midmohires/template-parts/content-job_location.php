@@ -42,7 +42,7 @@ $instagram = get_field('social-ig', $company[0]);
         ?>
         <!-- Website URL -->
         <?php
-        if( pick_field_company('website_url') ){
+        if( pick_field_company('website_url') && (strpos(pick_field_company('website_url'), 'https://') > -1 || strpos(pick_field_company('website_url'), 'http://') > -1)){
           echo '<div class="job-details-desc-item">';
           echo '<div class="float-left mr-2">';
           echo '<i class="mdi mdi-web text-muted"></i>';
