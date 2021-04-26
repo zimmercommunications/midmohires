@@ -142,7 +142,7 @@ $company = get_the_terms(get_the_id(), 'company');
 
                 <?php $args = array($jobHowToApply); ?>
                 <?php
-                if($jobMoreInfo){
+                if($jobHowToApply){
                     echo '<div class="row">';
                     echo    '<div class="col-lg-12">';
                     echo        '<h5 class="text-dark mt-4">How to Apply :</h5>';
