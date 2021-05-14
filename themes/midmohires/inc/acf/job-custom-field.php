@@ -22,13 +22,13 @@ acf_add_local_field_group(array(
 			'placeholder' => 'Display Name',
 			'prepend' => '',
 			'append' => '',
-			'maxlength' => 46,
+			'maxlength' => 100,
 		),
 		array(
 			'key' => 'field_5f861539762c7',
 			'label' => 'Job Type',
 			'name' => 'job_type',
-			'type' => 'checkbox',
+			'type' => 'select',
 			'instructions' => '',
 			'required' => 1,
 			'conditional_logic' => 0,
@@ -45,13 +45,13 @@ acf_add_local_field_group(array(
 				'INTERN' => 'Intern',
 				'OTHER' => 'Other',
 			),
-			'allow_custom' => 0,
-			'default_value' => array(
-			),
-			'layout' => 'vertical',
-			'toggle' => 0,
+			'default_value' => false,
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
 			'return_format' => 'value',
-			'save_custom' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
 		),
 		array(
 			'key' => 'field_5f8614756fa98',
@@ -239,6 +239,9 @@ acf_add_local_field_group(array(
 			),
 			'default_value' => '',
 			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
 		),
 		array(
 			'key' => 'field_5f8f2a069a722',
@@ -277,6 +280,11 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'acfe_display_title' => '',
+	'acfe_autosync' => '',
+	'acfe_form' => 0,
+	'acfe_meta' => '',
+	'acfe_note' => '',
 ));
 
 endif;
