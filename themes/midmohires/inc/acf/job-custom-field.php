@@ -38,8 +38,12 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'Full Time' => 'Full Time',
-				'Part Time' => 'Part Time',
+				'FULL_TIME' => 'Full Time',
+				'PART_TIME' => 'Part Time',
+				'CONTRACTOR' => 'Contractor',
+				'TEMPORARY' => 'Temporary',
+				'INTERN' => 'Intern',
+				'OTHER' => 'Other',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(
