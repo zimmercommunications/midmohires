@@ -71,7 +71,7 @@
 
                         <!-- COMPANIES -->
                         <?php
-                            $terms = new WP_Term_Query(array('taxonomy' => 'company', 'orderby' => 'name', 'order' => 'ASC'));
+                            $terms = new WP_Term_Query(array('taxonomy' => 'company', 'orderby' => 'name-special', 'order' => 'ASC'));
                             if(count($terms->get_terms()) > 0) :
                                 $cur_cat = "";
                         ?>

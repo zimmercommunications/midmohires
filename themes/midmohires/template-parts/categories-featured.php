@@ -2,13 +2,13 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="section-title text-center mb-4 pb-2">
-                <h4 class="title title-line pb-5">Featured Catagories</h4>
+                <h4 class="title title-line pb-5">Featured Categories</h4>
             </div>
         </div>
     </div>
     <div class="row">
       <?php
-      $query = new WP_Term_Query( array('taxonomy' => 'job_category') );
+      $query = new WP_Term_Query( array('taxonomy' => 'job_category', 'orderby' => 'name') );
 
       foreach ( $query->terms as $term ) {
         get_template_part('template-parts/content', 'category_block', array('term' => $term));

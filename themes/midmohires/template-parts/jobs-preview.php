@@ -38,12 +38,14 @@
                             $args = array(
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
-                                'meta_query' => array(
-                                  array(
-                                    'key' => 'featured',
-                                    'value' => 1,
-                                  ),
-                                )
+                                'orderby' => 'rand',
+                                'has_password' => false,
+                                // 'meta_query' => array(
+                                //   array(
+                                //     'key' => 'featured',
+                                //     'value' => 1,
+                                //   ),
+                                // )
 
                             );
                             //starting the query
@@ -78,6 +80,7 @@
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
                                 'orderby' => 'rand',
+                                'has_password' => false,
                                 'meta_query' => array(
                                   array(
                                     'key' => 'job_type',
@@ -118,6 +121,7 @@
                                 'post_type' => 'job',
                                 'posts_per_page' => 4,
                                 'orderby' => 'rand',
+                                'has_password' => false,
                                 'meta_query' => array(
                                   array(
                                     'key' => 'job_type',
