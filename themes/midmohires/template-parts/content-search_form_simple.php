@@ -8,7 +8,7 @@
                             <div class="registration-form-box">
                                 <i class="fa fa-briefcase"></i>
                                 <?php $s = (isset($_GET['s'])) ? $_GET['s'] : ""; ?>
-                                <input type="text" id="exampleInputName1" name="s" value="<?php echo $s; ?>" class="form-control rounded registration-input-box" placeholder="Job keybords...">
+                                <input type="text" id="exampleInputName1" name="s" value="<?php echo $s; ?>" class="form-control rounded registration-input-box" placeholder="Job keywords...">
                             </div>
                         </div>
 

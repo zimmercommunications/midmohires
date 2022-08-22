@@ -8,7 +8,7 @@
                             <div class="registration-form-box">
                                 <i class="fa fa-briefcase"></i>
                                 <?php $s = (isset($_GET['s'])) ? $_GET['s'] : ""; ?>
-                                <input type="text" id="exampleInputName1" name="s" value="<?php echo $s; ?>" class="form-control rounded registration-input-box" placeholder="Job keybords...">
+                                <input type="text" id="exampleInputName1" name="s" value="<?php echo $s; ?>" class="form-control rounded registration-input-box" placeholder="Job keywords...">
                             </div>
                         </div>
 
@@ -24,6 +24,7 @@
                                 <i class="fa fa-building"></i>
                                 <select id="select-company" name="company[]" class="demo-default">
                                     <option value="">Company</option>
+                                    <!-- To Do: this option should not pass data if it is empty -->
                                     <?php foreach($terms->get_terms() as $term) : ?>
                                         <option <?php if($cur_company == $term->slug) echo 'selected="selected"'; ?> value="<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>
                                     <?php endforeach; ?>
@@ -43,9 +44,14 @@
                             <div class="registration-form-box">
                                 <i class="fa fa-list-alt"></i>
                                 <select id="select-category" name="job_category[]" class="demo-default">
-                                    <option value="">Category</option>
+                                    <option value="" placeholder="Pick a Job Category">Job Category</option>
+                                    <!-- To Do: this option should not pass data if it is empty -->
                                     <?php foreach($terms->get_terms() as $term) : ?>
-                                        <option <?php if($cur_cat == $term->slug) echo 'selected="selected"'; ?> value="<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>
+                                        <option <?php 
+                                        if($cur_cat == $term->slug) echo 'selected="selected"'; ?> value="<?php echo $term->slug; ?>">
+                                        
+                                    <?php echo $term->name; ?>
+                                    </option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>

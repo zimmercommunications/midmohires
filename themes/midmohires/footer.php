@@ -20,7 +20,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="">
-                    <p class="mb-0">© 2020 Mid-Mo Hires. Design by Zimmer Communications.</p>
+					<p class="mb-0">© <?php date('Y'); ?> Mid-Mo Hires. Site by <a href="https://zimmercommunications.com/" target="_blank" rel="noopener">Zimmer Communications <img src="https://midmohires.com/goodies/uploads/2022/08/site-by-zimmer-30x30-transparent.png" alt="Zimmer Communications logo" width="30" height="30" style="background-color:#999;" /></a></p>
                 </div>
             </div>
         </div>

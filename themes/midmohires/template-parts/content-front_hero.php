@@ -20,7 +20,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="title-heading text-center text-white">
-                            <h6 class="small-title text-uppercase text-light mb-3">Find jobs, create trackable resumes and enrich your applications.</h6>
+                            <h6 class="small-title text-uppercase text-light mb-3">Find jobs right here in mid-Missouri.</h6>
                             <h1 class="heading font-weight-bold mb-4">The Easiest Way to Get Your New Job</h1>
                         </div>
                     </div>

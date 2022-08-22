@@ -1,6 +1,6 @@
 <?php
 
-add_action('after_setup_theme', 'clean_tax', 1);
+//add_action('after_setup_theme', 'clean_tax', 1);
 function clean_tax(){
 
     $test = array('company', 'job_category');
