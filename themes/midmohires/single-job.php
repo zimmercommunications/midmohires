@@ -140,9 +140,9 @@ $company = get_the_terms(get_the_id(), 'company');
 
                 <!-- How to Apply Section Start  -->
 
-                <?php $args = array($jobHowToApply); ?>
+                <?php $args = array($jobHowToApply ); ?>
                 <?php
-                if($jobHowToApply){
+                if($jobHowToApply ){
                     echo '<div class="row">';
                     echo    '<div class="col-lg-12">';
                     echo        '<h5 class="text-dark mt-4">How to Apply :</h5>';

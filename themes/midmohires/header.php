@@ -38,8 +38,8 @@
             <!-- Logo container-->
             <div>
                 <a href="<?php echo site_url(); ?>" class="logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-light" height="25" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/long-logo.png" alt="" class="logo-dark" height="25" />
+                    <img src="https://midmohires.com/goodies/uploads/2021/02/midMoHiresLogo-1.png" alt="" class="logo-light" height="80px" />
+                    <img src="https://midmohires.com/goodies/uploads/2021/02/midMoHiresLogo-1.png" alt="" class="logo-dark" height="80px" />
                 </a>
             </div>
             <?php $post_a_job = get_field('post_a_job_page', 'option'); ?>
